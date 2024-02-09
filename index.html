@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <div class="header">
+      <h2><i class="left fas fa-question"></i>WORDLE <i class="right fas fa-tools"></i></i> <i class="right fas fa-cog"></i> </h2>
+      <hr>
+    </div>
+
+    <div class="grid">
+      <div class="row0 row">
+        <input id="00" maxlength="1">
+        <input id="01" maxlength="1">
+        <input id="02" maxlength="1">
+        <input id="03" maxlength="1">
+        <input id="04" maxlength="1">
+      </div>
+
+      <div class="row1 row">
+        <input id="10" maxlength="1">
+        <input id="11" maxlength="1">
+        <input id="12" maxlength="1">
+        <input id="13" maxlength="1">
+        <input id="14" maxlength="1">
+      </div>
+
+      <div class="row2 row">
+        <input id="20" maxlength="1">
+        <input id="21" maxlength="1">
+        <input id="22" maxlength="1">
+        <input id="23" maxlength="1">
+        <input id="24" maxlength="1">
+      </div>
+
+      <div class="row3 row">
+        <input id="30" maxlength="1">
+        <input id="31" maxlength="1">
+        <input id="32" maxlength="1">
+        <input id="33" maxlength="1">
+        <input id="34" maxlength="1">
+      </div>
+
+      <div class="row4 row">
+        <input id="40" maxlength="1">
+        <input id="41" maxlength="1">
+        <input id="42" maxlength="1">
+        <input id="43" maxlength="1">
+        <input id="44" maxlength="1">
+      </div>
+
+      <div class="row5 row">
+        <input id="50" maxlength="1">
+        <input id="51" maxlength="1">
+        <input id="52" maxlength="1">
+        <input id="53" maxlength="1">
+        <input id="54" maxlength="1">
+      </div>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <div class="keyboard">
+      <p class="toprow">
+        <button id="q">Q</button>
+        <button id="w">W</button>
+        <button id="e">E</button>
+        <button id="r">R</button>
+        <button id="t">T</button>
+        <button id="y">Y</button>
+        <button id="u">U</button>
+        <button id="i">I</button>
+        <button id="o">O</button>
+        <button id="p">P</button>
+      </p>
+
+      <p class="middlerow">
+        <button id="a">A</button>
+        <button id="s">S</button>
+        <button id="d">D</button>
+        <button id="f">F</button>
+        <button id="g">G</button>
+        <button id="h">H</button>
+        <button id="j">J</button>
+        <button id="k">K</button>
+        <button id="l">L</button>
+      </p>
+
+      <p class="bottomrow">
+        <button id="enter">ENTER</button>
+        <button id="z">Z</button>
+        <button id="x">X</button>
+        <button id="c">C</button>
+        <button id="v">V</button>
+        <button id="b">B</button>
+        <button id="n">N</button>
+        <button id="m">M</button>
+        <button id="del">DELETE</button>
+      </p>
+    </div>
+
+    <script src="loadwords.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
