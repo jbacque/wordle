@@ -6,7 +6,7 @@ let letterClicked = "";
 let currentWord = "";
 let correctWord;
 
-setTimeout(getSolution, 150);
+setTimeout(getSolution, 500);
 
 function getSolution() {
   let rand = Math.floor(Math.random() * allWords.length);
@@ -81,6 +81,15 @@ function submitWord() {
   } else if (currentWord.length == 5) {
     // user submitted a good word
     let numGreenLetters = 0;
+
+    // Black out letters already used
+    for (let i = 0; i < currentWord.length; i++) {
+      let letterEl = document.getElementById("" + currentWord.charAt(i));
+      letterEl.style.background = "black";
+      letterEl.style.color = "white";
+    }
+
+    // Change background colors for good guesses
     for (let i = 0; i < currentWord.length; i++) {
       // correct letter and location, correct letter wrong location, was red background
       if (currentWord.charAt(i) == correctWord.charAt(i)) {
@@ -88,6 +97,10 @@ function submitWord() {
         document.getElementById("" + row + i).style.background =
           "rgb(106,170,100)";
         document.getElementById("" + row + i).style.color = "white";
+
+        // update keyboard letter color
+        document.getElementById("" + currentWord.charAt(i)).style.background =
+          "rgb(106,170,100)";
 
         numGreenLetters++;
         if (numGreenLetters == 5) {
@@ -98,9 +111,13 @@ function submitWord() {
         document.getElementById("" + row + i).style.background =
           "rgb(209,176,54)";
         document.getElementById("" + row + i).style.color = "white";
+
+        // update keyboard letter color
+        document.getElementById("" + currentWord.charAt(i)).style.background =
+          "rgb(209,176,54)";
       } else {
-        document.getElementById("" + row + i).style.background = "white";
-        document.getElementById("" + row + i).style.color = "black";
+        document.getElementById("" + row + i).style.background = "darkgray";
+        document.getElementById("" + row + i).style.color = "white";
       }
     }
 
